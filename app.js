@@ -1,3 +1,22 @@
+const txtcolor = document.getElementById("txtclor");
+txtcolor.addEventListener("input", function(){
+    const txtcolors = txtcolor.value;
+
+    document.getElementById("bady").style.color = `${txtcolors}`;
+    
+
+}, false);
+
+
+
+const bgcolor = document.getElementById("bgclor");
+bgcolor.addEventListener("input", function(){
+    const bgcolors = bgcolor.value;
+
+    document.getElementById("bady").style.backgroundColor = `${bgcolors}`;
+    
+
+}, false);
 
 
 
