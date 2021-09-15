@@ -33,7 +33,7 @@ function Delete(){
             
                 let chbnumlbl = 0;
                 let brrnum = 0;
-                for (let chbnum = 1; chbnum <= 300; chbnum++) {
+                for (let chbnum = 3; chbnum <= 300; chbnum++) {
                     const checkbox = document.getElementsByTagName("input")[chbnum];
                     const checkBoxLbl = document.getElementsByTagName("label")[chbnumlbl];
                     const brr = document.getElementsByTagName("br")[brrnum];
@@ -57,7 +57,7 @@ function Delete(){
 function checking() {
     try {
         let chbnumlbl = 0;
-        for (let chbnum = 1; chbnum <= 300; chbnum++) {
+        for (let chbnum = 3; chbnum <= 300; chbnum++) {
             const checkbox = document.getElementsByTagName("input")[chbnum];
             const checkBoxLbl = document.getElementsByTagName("label")[chbnumlbl];
             
