@@ -1,7 +1,23 @@
+@font-face {
+    font-family: 'Lato';
+    src: url(fonts/Lato-Black.ttf);
+}
 .icon{
-    background:url(imgs/trashBin2.png) no-repeat;
+    background:url(imgs/trashBin5.png) no-repeat;
     float: left;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     
+}
+
+#bady{
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+}
+.btn{
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
 }

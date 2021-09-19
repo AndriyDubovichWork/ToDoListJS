@@ -71,6 +71,7 @@ function checking() {
 }
 let delities = "";
 function addToList() {
+    
     const inpValue = document.getElementById("inp").value;
 
     if (inpValue !== "") {
@@ -79,8 +80,8 @@ function addToList() {
         element.innerHTML += html;
         document.getElementById("inp").value = "";
 
-        // save cookies
-        Cookies.set('hello','world')
+        // save cookies =fuck this featur spend 3 days
+        
     }
 }
 
