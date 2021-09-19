@@ -1,12 +1,29 @@
+const brdrclor = document.getElementById("brdrclor");
+brdrclor.addEventListener(
+    "input",
+    function () {
+        const brdrclors = brdrclor.value;
 
+        
+        document.getElementById("inp").style.border = `2px solid ${brdrclors}`;
+        document.getElementById("btn_1").style.border = `2px solid ${brdrclors}`;
+        document.getElementById("btn_2").style.border = `2px solid ${brdrclors}`;
+        document.getElementById("del").style.border = `2px solid ${brdrclors}`;
+    },
+    false
+);
 
 const txtcolor = document.getElementById("txtclor");
 txtcolor.addEventListener(
     "input",
     function () {
         const txtcolors = txtcolor.value;
-
+        document.getElementById("btn_1").style.backgroundColor = `${txtcolors}`;
+        document.getElementById("btn_2").style.backgroundColor = `${txtcolors}`;
+        document.getElementById("del").style.backgroundColor = `${txtcolors}`;
+        document.getElementById("inp").style.backgroundColor = `${txtcolors}`;
         document.getElementById("bady").style.color = `${txtcolors}`;
+ 
     },
     false
 );
@@ -16,6 +33,9 @@ bgcolor.addEventListener(
     "input",
     function () {
         const bgcolors = bgcolor.value;
+        document.getElementById("btn_1").style.color = `${bgcolors}`;
+        document.getElementById("btn_2").style.color = `${bgcolors}`;
+        document.getElementById("inp").style.color = `${bgcolors}`;
 
         document.getElementById("bady").style.backgroundColor = `${bgcolors}`;
     },
@@ -33,11 +53,9 @@ function Delete() {
             try {
                 let chbnumlbl = 0;
                 let brrnum = 0;
-                for (let chbnum = 3; chbnum <= 300; chbnum++) {
-                    const checkbox =
-                        document.getElementsByTagName("input")[chbnum];
-                    const checkBoxLbl =
-                        document.getElementsByTagName("label")[chbnumlbl];
+                for (let chbnum = 4; chbnum <= 300; chbnum++) {
+                    const checkbox = document.getElementsByTagName("input")[chbnum];
+                    const checkBoxLbl = document.getElementsByTagName("label")[chbnumlbl];
                     const brr = document.getElementsByTagName("br")[brrnum];
 
                     if (checkbox.checked === true) {
@@ -55,7 +73,7 @@ function Delete() {
 function checking() {
     try {
         let chbnumlbl = 0;
-        for (let chbnum = 3; chbnum <= 300; chbnum++) {
+        for (let chbnum = 4; chbnum <= 300; chbnum++) {
             const checkbox = document.getElementsByTagName("input")[chbnum];
             const checkBoxLbl =
                 document.getElementsByTagName("label")[chbnumlbl];
@@ -69,14 +87,14 @@ function checking() {
         }
     } catch (error) {}
 }
-let delities = "";
+
 function addToList() {
     
     const inpValue = document.getElementById("inp").value;
-
+    checking()
     if (inpValue !== "") {
         const element = document.getElementById("inject");
-        const html = `<input type = 'checkbox' id = "checkBox" name = 'checkBox'onclick = "checking()" style = 'margin:0'></input><label for = 'checkBox' id = 'LblForCheckBox' style = 'margin:0'>${inpValue}</label><br>`;
+        const html = `<input type = 'checkbox' id = "checkBox" name = 'checkBox'onclick = "checking()" style = 'margin:0;zoom: 1.6;'></input><label for = 'checkBox' id = 'LblForCheckBox' style = 'margin:0'>${inpValue}</label><br>`;
         element.innerHTML += html;
         document.getElementById("inp").value = "";
 
